@@ -2,16 +2,16 @@ name: mexico_elections_2024
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
+  - python
   - pandas
   - numpy
   - geopandas
+  - jupyterlab
   - shapely
   - matplotlib
   - seaborn
   - scikit-learn
   - pyproj
-  - jupyterlab
   - jupyter
   - notebook
   - gdal

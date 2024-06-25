@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Percentage vs Participation Percentage by Coalition</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .plot {
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 600px;
+        }
+        .plot img {
+            width: 100%;
+        }
+        .plot h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vote Percentage vs Participation Percentage by Coalition</h1>
+    <div class="container">
+        {% for plot in plots %}
+        <div class="plot">
+            <h3>{{ plot.distrito_name }} (ID: {{ plot.id_distrito }})</h3>
+            <img src="{{ plot.file_path }}" alt="Plot for ID {{ plot.id_distrito }}">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
